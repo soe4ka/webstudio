@@ -1,0 +1,135 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $secondary-background-color;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+
+  @include tablet {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @include desktop {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.address-block {
+  margin-bottom: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    // padding-left: 76px;
+    margin-right: 165px;
+  }
+
+  @include desktop {
+    margin: 0 70px 0 0;
+    align-items: normal;
+  }
+}
+
+.page-footer__logo {
+  display: inline-block;
+  margin-bottom: 28px;
+
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  color: $primary-white;
+  text-decoration: none;
+
+  @include desktop {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
+}
+
+.address-block__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+
+  @include desktop {
+    align-items: normal;
+  }
+}
+
+.address-block__address,
+.address-block__contact {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  color: $primary-white;
+  text-decoration: none;
+}
+
+.address-block__contact {
+  color: $semi-transparent-white;
+
+  transition-property: color;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.social-block {
+  margin-bottom: 60px;
+
+  @include desktop {
+    margin: 0 94px 0 0;
+  }
+}
+
+.social-block__title {
+  margin-bottom: 20px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  color: $primary-white;
+  text-align: center;
+
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.socials-list {
+  @extend %socials;
+}
+
+.socials-list__item {
+  @extend %socials__item;
+}
+
+.socials-list__link {
+  @extend %socials__link;
+
+  background-color: rgba(225, 225, 225, 0.1);
+}
+
+.socials-list__icon {
+  fill: $primary-white;
+}

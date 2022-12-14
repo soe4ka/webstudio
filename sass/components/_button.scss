@@ -1,0 +1,26 @@
+.btn {
+  padding: 10px 32px;
+
+  min-width: 216px;
+  display: inline-block;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: $primary-white;
+
+  background-color: $accent-color;
+  border: none;
+  border-radius: 4px;
+
+  transition-property: box-shadow;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

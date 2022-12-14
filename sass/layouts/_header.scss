@@ -1,0 +1,83 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.contacts {
+  @include max-mobile {
+    display: none;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-left: auto;
+    padding: 21px 0;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 40px;
+
+    padding: 32px 0;
+  }
+}
+
+.contacts__link {
+  @include tablet {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+
+    transition-property: color;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  @include desktop {
+    font-size: 14px;
+    line-height: calc(16 / 14);
+  }
+}
+
+.contacts__icon {
+  @include tablet {
+    display: block;
+    margin-right: 8px;
+
+    fill: currentColor;
+    &.envelope {
+      width: 14px;
+      height: 10px;
+    }
+    &.telephone {
+      width: 10px;
+      height: 14px;
+    }
+  }
+
+  @include desktop {
+    margin-right: 10px;
+
+    fill: currentColor;
+    &.envelope {
+      width: 16px;
+      height: 12px;
+    }
+    &.telephone {
+      width: 10px;
+      height: 16px;
+    }
+  }
+}

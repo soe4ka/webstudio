@@ -1,0 +1,82 @@
+.team-section {
+  background-color: $secondary-white;
+}
+
+.workers {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  @include desktop {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+
+.workers__item {
+  background-color: $primary-white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:nth-last-child(-n + 2) {
+    @include tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
+}
+
+.workers__information {
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  @include desktop {
+    padding-bottom: 30px;
+  }
+}
+
+.workers__title {
+  margin-bottom: 10px;
+
+  font-size: inherit;
+  font-weight: 500;
+  line-height: calc(19 / 16);
+  text-align: center;
+
+  color: $secondary-text-color;
+}
+
+.workers__position {
+  margin-bottom: 16px;
+
+  line-height: calc(19 / 16);
+  text-align: center;
+}
+
+.socials {
+  @extend %socials;
+}
+
+.socials__item {
+  @extend %socials__item;
+}
+
+.socials__link {
+  @extend %socials__link;
+}
+
+.socials__icon {
+  @extend %socials__icon;
+}
